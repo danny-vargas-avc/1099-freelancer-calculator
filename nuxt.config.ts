@@ -10,7 +10,7 @@ export default defineNuxtConfig({
           innerHTML: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-RWVL7QKNEE');`,
         },
         {
-          src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXXX',
+          src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8420827185796423',
           async: true,
           crossorigin: 'anonymous',
         },
@@ -35,7 +35,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      adsenseId: '',
+      adsenseId: 'ca-pub-8420827185796423',
     },
   },
 
