@@ -29,7 +29,7 @@ const MIN_HEIGHTS: Record<typeof props.placement, string> = {
 }
 
 const containerClass = computed(() => {
-  const base = 'w-full overflow-hidden bg-gray-50 rounded'
+  const base = 'w-full overflow-hidden bg-zinc-800/50 rounded-lg'
   return base
 })
 

@@ -1,7 +1,7 @@
 <template>
   <main class="max-w-3xl mx-auto px-4 py-10">
-    <h1 class="text-3xl font-bold text-gray-900 mb-2">1099 Tax Calculator 2026</h1>
-    <p class="text-gray-500 mb-8">
+    <h1 class="text-3xl font-bold text-zinc-100 mb-2">1099 Tax Calculator 2026</h1>
+    <p class="text-zinc-400 mb-8">
       Estimate your self-employment tax, federal income tax, and net annual income as a freelancer or 1099 contractor.
       Includes the SE deduction — 50% of your SE tax is deductible from federal income.
     </p>
@@ -13,7 +13,7 @@
         v-for="tool in tools"
         :key="tool.href"
         :to="tool.href"
-        class="bg-white rounded-xl border border-gray-200 p-5 hover:border-indigo-300 hover:shadow-sm transition-all"
+        class="bg-zinc-900 rounded-xl border border-zinc-800 p-5 hover:border-indigo-500/50 hover:bg-zinc-800/50 transition-all"
       >
         <p class="font-semibold text-gray-900 mb-1">{{ tool.label }}</p>
         <p class="text-sm text-gray-500">{{ tool.description }}</p>
@@ -21,13 +21,13 @@
     </section>
 
     <section class="mt-14">
-      <h2 class="text-xl font-semibold text-gray-900 mb-4">Calculate by State</h2>
+      <h2 class="text-xl font-semibold text-zinc-100 mb-4">Calculate by State</h2>
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
         <NuxtLink
           v-for="state in allStates"
           :key="state.slug"
           :to="`/1099-tax-calculator/${state.slug}`"
-          class="text-sm text-indigo-600 hover:underline py-1"
+          class="text-sm text-indigo-400 hover:text-indigo-300 hover:underline py-1 transition-colors"
         >
           {{ state.name }}
         </NuxtLink>

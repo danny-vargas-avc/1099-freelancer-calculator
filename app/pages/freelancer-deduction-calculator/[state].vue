@@ -9,10 +9,10 @@
       class="mb-6"
     />
 
-    <h1 class="text-3xl font-bold text-gray-900 mb-2">
+    <h1 class="text-3xl font-bold text-zinc-100 mb-2">
       {{ state.name }} Freelancer Deduction Calculator 2026
     </h1>
-    <p class="text-gray-500 mb-8">
+    <p class="text-zinc-400 mb-8">
       See how business deductions reduce your {{ state.name }} freelancer taxes in 2026.
       Deductions lower your net SE income, which reduces both your SE tax and
       {{ state.hasIncomeTax ? `${state.name} state income tax` : 'federal income tax (no state income tax in ' + state.name + ')' }}.
@@ -23,13 +23,13 @@
     <AdUnit slot="1234567894" placement="below-results" class="mt-6" />
 
     <section class="mt-10">
-      <h2 class="text-xl font-semibold text-gray-900 mb-3">
+      <h2 class="text-xl font-semibold text-zinc-100 mb-3">
         Deductions for {{ state.name }} Freelancers
       </h2>
       <p
         v-for="(para, i) in state.uniqueCopy.split('\n\n')"
         :key="i"
-        class="text-gray-600 leading-relaxed mb-3"
+        class="text-zinc-400 leading-relaxed mb-3"
       >{{ para }}</p>
     </section>
 

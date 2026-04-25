@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gray-50 flex flex-col">
+  <div class="min-h-screen bg-zinc-950 flex flex-col">
     <NuxtRouteAnnouncer />
     <AppHeader />
     <div class="flex-1">

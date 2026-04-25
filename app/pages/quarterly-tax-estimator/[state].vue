@@ -9,10 +9,10 @@
       class="mb-6"
     />
 
-    <h1 class="text-3xl font-bold text-gray-900 mb-2">
+    <h1 class="text-3xl font-bold text-zinc-100 mb-2">
       {{ state.name }} Quarterly Tax Estimator 2026
     </h1>
-    <p class="text-gray-500 mb-8">
+    <p class="text-zinc-400 mb-8">
       Estimate your 2026 quarterly tax payments as a {{ state.name }} freelancer or self-employed worker.
       Covers SE tax (15.3%), federal income tax,
       {{ state.hasIncomeTax ? `and ${state.name} state income tax` : 'and no state income tax' }}.
@@ -23,13 +23,13 @@
     <AdUnit slot="1234567892" placement="below-results" class="mt-6" />
 
     <section class="mt-10">
-      <h2 class="text-xl font-semibold text-gray-900 mb-3">
+      <h2 class="text-xl font-semibold text-zinc-100 mb-3">
         {{ state.name }} Quarterly Taxes for Freelancers
       </h2>
       <p
         v-for="(para, i) in state.uniqueCopy.split('\n\n')"
         :key="i"
-        class="text-gray-600 leading-relaxed mb-3"
+        class="text-zinc-400 leading-relaxed mb-3"
       >{{ para }}</p>
     </section>
 

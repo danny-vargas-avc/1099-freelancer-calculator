@@ -2,19 +2,19 @@
   <div class="overflow-x-auto">
     <table class="w-full text-sm border-collapse">
       <thead>
-        <tr class="bg-gray-50 text-left">
-          <th class="px-4 py-2 font-medium text-gray-600 border-b border-gray-200">Tax Rate</th>
-          <th class="px-4 py-2 font-medium text-gray-600 border-b border-gray-200">Income Range</th>
-          <th class="px-4 py-2 font-medium text-gray-600 border-b border-gray-200 text-right">Max Tax in Bracket</th>
+        <tr class="bg-zinc-800/50 text-left">
+          <th class="px-4 py-2 font-medium text-zinc-400 border-b border-zinc-700">Tax Rate</th>
+          <th class="px-4 py-2 font-medium text-zinc-400 border-b border-zinc-700">Income Range</th>
+          <th class="px-4 py-2 font-medium text-zinc-400 border-b border-zinc-700 text-right">Max Tax in Bracket</th>
         </tr>
       </thead>
-      <tbody class="divide-y divide-gray-100">
-        <tr v-for="(bracket, i) in brackets" :key="i" class="hover:bg-gray-50">
-          <td class="px-4 py-2 font-semibold text-gray-900">{{ pct(bracket.rate) }}</td>
-          <td class="px-4 py-2 text-gray-700">
+      <tbody class="divide-y divide-zinc-800">
+        <tr v-for="(bracket, i) in brackets" :key="i" class="hover:bg-zinc-800/40 transition-colors">
+          <td class="px-4 py-2 font-semibold text-indigo-400">{{ pct(bracket.rate) }}</td>
+          <td class="px-4 py-2 text-zinc-300">
             {{ fmt(bracket.min) }} – {{ bracket.max === Infinity ? 'and above' : fmt(bracket.max) }}
           </td>
-          <td class="px-4 py-2 text-right text-gray-500">
+          <td class="px-4 py-2 text-right text-zinc-500">
             {{ bracket.max === Infinity ? '—' : fmt((bracket.max - bracket.min) * bracket.rate) }}
           </td>
         </tr>

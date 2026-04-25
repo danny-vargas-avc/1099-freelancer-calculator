@@ -1,22 +1,22 @@
 <template>
   <section>
-    <h2 class="text-xl font-semibold text-gray-900 mb-4">Other Calculators</h2>
+    <h2 class="text-xl font-semibold text-zinc-100 mb-4">Other Calculators</h2>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
       <div>
-        <h3 class="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">{{ stateName }} Calculators</h3>
+        <h3 class="text-xs font-medium text-zinc-500 uppercase tracking-wide mb-2">{{ stateName }} Calculators</h3>
         <ul class="space-y-1">
           <li v-for="link in stateCalcLinks" :key="link.href">
-            <NuxtLink :to="link.href" class="text-indigo-600 hover:underline text-sm">{{ link.label }}</NuxtLink>
+            <NuxtLink :to="link.href" class="text-indigo-400 hover:text-indigo-300 hover:underline text-sm transition-colors">{{ link.label }}</NuxtLink>
           </li>
         </ul>
       </div>
 
       <div v-if="neighborLinks.length">
-        <h3 class="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">Compare Nearby States</h3>
+        <h3 class="text-xs font-medium text-zinc-500 uppercase tracking-wide mb-2">Compare Nearby States</h3>
         <ul class="space-y-1">
           <li v-for="link in neighborLinks" :key="link.href">
-            <NuxtLink :to="link.href" class="text-indigo-600 hover:underline text-sm">{{ link.label }}</NuxtLink>
+            <NuxtLink :to="link.href" class="text-indigo-400 hover:text-indigo-300 hover:underline text-sm transition-colors">{{ link.label }}</NuxtLink>
           </li>
         </ul>
       </div>

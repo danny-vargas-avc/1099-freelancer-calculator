@@ -1,9 +1,9 @@
 <template>
   <div class="w-full max-w-2xl mx-auto space-y-6">
-    <form class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 space-y-4" @submit.prevent>
+    <form class="bg-zinc-900 rounded-xl border border-zinc-800 p-6 space-y-4" @submit.prevent>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div class="sm:col-span-2">
-          <label class="block text-sm font-medium text-gray-700 mb-1" for="income">
+          <label class="block text-sm font-medium text-zinc-300 mb-1" for="income">
             Annual Self-Employment Income ($)
           </label>
           <input
@@ -13,19 +13,19 @@
             min="0"
             step="1"
             placeholder="80000"
-            class="w-full rounded-lg border border-gray-300 px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            class="w-full rounded-lg border border-zinc-700 bg-zinc-800 px-3 py-2 text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
-          <p class="text-xs text-gray-400 mt-1">After business expenses, before taxes</p>
+          <p class="text-xs text-zinc-500 mt-1">After business expenses, before taxes</p>
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 mb-1" for="filingStatus">
+          <label class="block text-sm font-medium text-zinc-300 mb-1" for="filingStatus">
             Filing Status
           </label>
           <select
             id="filingStatus"
             v-model="filingStatus"
-            class="w-full rounded-lg border border-gray-300 px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            class="w-full rounded-lg border border-zinc-700 bg-zinc-800 px-3 py-2 text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
           >
             <option value="single">Single</option>
             <option value="married">Married Filing Jointly</option>
@@ -33,13 +33,13 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 mb-1" for="state">
+          <label class="block text-sm font-medium text-zinc-300 mb-1" for="state">
             State
           </label>
           <select
             id="state"
             v-model="selectedStateSlug"
-            class="w-full rounded-lg border border-gray-300 px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            class="w-full rounded-lg border border-zinc-700 bg-zinc-800 px-3 py-2 text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
           >
             <option v-for="s in allStates" :key="s.slug" :value="s.slug">
               {{ s.name }}
@@ -51,29 +51,29 @@
 
     <ResultsBreakdown v-if="result" :result="result" />
 
-    <div v-if="result" class="bg-white rounded-xl border border-gray-200 p-5 text-sm space-y-2">
-      <p class="font-medium text-gray-700 mb-3">How it's calculated</p>
-      <div class="flex justify-between text-gray-600">
+    <div v-if="result" class="bg-zinc-900 rounded-xl border border-zinc-800 p-5 text-sm space-y-2">
+      <p class="font-medium text-zinc-300 mb-3">How it's calculated</p>
+      <div class="flex justify-between text-zinc-400">
         <span>SE wages (92.35% of income)</span>
         <span>{{ fmt(result.grossAnnual * 0.9235) }}</span>
       </div>
-      <div class="flex justify-between text-gray-600">
+      <div class="flex justify-between text-zinc-400">
         <span>Self-employment tax (15.3%)</span>
         <span>{{ fmt(result.selfEmployment.tax) }}</span>
       </div>
-      <div class="flex justify-between text-gray-600">
+      <div class="flex justify-between text-zinc-400">
         <span>SE deduction (50% of SE tax)</span>
         <span>−{{ fmt(result.selfEmployment.deduction) }}</span>
       </div>
-      <div class="flex justify-between text-gray-600">
+      <div class="flex justify-between text-zinc-400">
         <span>Federal taxable income</span>
         <span>{{ fmt(result.grossAnnual - result.selfEmployment.deduction - result.federal.deduction) }}</span>
       </div>
-      <div class="flex justify-between text-gray-600">
+      <div class="flex justify-between text-zinc-400">
         <span>Standard deduction</span>
         <span>−{{ fmt(result.federal.deduction) }}</span>
       </div>
-      <div class="flex justify-between font-medium text-gray-900 border-t border-gray-100 pt-2">
+      <div class="flex justify-between font-medium text-gray-900 border-t border-zinc-800 pt-2">
         <span>Effective tax rate</span>
         <span>{{ (result.effectiveTotalRate * 100).toFixed(1) }}%</span>
       </div>

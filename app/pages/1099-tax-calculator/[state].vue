@@ -9,10 +9,10 @@
       class="mb-6"
     />
 
-    <h1 class="text-3xl font-bold text-gray-900 mb-2">
+    <h1 class="text-3xl font-bold text-zinc-100 mb-2">
       {{ state.name }} 1099 Tax Calculator 2026
     </h1>
-    <p class="text-gray-500 mb-8">
+    <p class="text-zinc-400 mb-8">
       Estimate your self-employment taxes as a {{ state.name }} freelancer or contractor.
       Includes SE tax (15.3%), the 50% SE deduction, federal income tax,
       {{ state.hasIncomeTax ? `and ${state.name} state income tax` : 'and no state income tax' }}.
@@ -23,18 +23,18 @@
     <AdUnit slot="1234567890" placement="below-results" class="mt-6" />
 
     <section class="mt-10">
-      <h2 class="text-xl font-semibold text-gray-900 mb-3">
+      <h2 class="text-xl font-semibold text-zinc-100 mb-3">
         {{ state.name }} Tax Overview for 1099 Workers
       </h2>
       <p
         v-for="(para, i) in state.uniqueCopy.split('\n\n')"
         :key="i"
-        class="text-gray-600 leading-relaxed mb-3"
+        class="text-zinc-400 leading-relaxed mb-3"
       >{{ para }}</p>
     </section>
 
     <div v-if="state.brackets" class="mt-8">
-      <h2 class="text-xl font-semibold text-gray-900 mb-3">{{ state.name }} Tax Brackets 2026</h2>
+      <h2 class="text-xl font-semibold text-zinc-100 mb-3">{{ state.name }} Tax Brackets 2026</h2>
       <TaxBracketTable :brackets="state.brackets.single" />
     </div>
 
