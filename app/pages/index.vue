@@ -1,9 +1,11 @@
 <template>
   <main class="max-w-3xl mx-auto px-4 py-10">
-    <h1 class="text-3xl font-bold text-zinc-100 mb-2">1099 Tax Calculator 2026</h1>
-    <p class="text-zinc-400 mb-8">
-      Estimate your self-employment tax, federal income tax, and net annual income as a freelancer or 1099 contractor.
-      Includes the SE deduction — 50% of your SE tax is deductible from federal income.
+    <h1 class="text-3xl font-bold text-zinc-100 mb-3">1099 Tax Calculator 2026</h1>
+    <p class="text-zinc-400 mb-8 leading-relaxed">
+      The shortcut I wished existed when I started freelancing: punch in your gross 1099 income, pick your state,
+      and see your real take-home — self-employment tax, federal income tax, state tax, and the SE deduction all
+      worked out for you. Math runs in your browser, nothing leaves your machine, and the brackets are current for
+      the 2026 tax year.
     </p>
 
     <SelfEmploymentCalculator />
@@ -15,8 +17,8 @@
         :to="tool.href"
         class="bg-zinc-900 rounded-xl border border-zinc-800 p-5 hover:border-indigo-500/50 hover:bg-zinc-800/50 transition-all"
       >
-        <p class="font-semibold text-gray-900 mb-1">{{ tool.label }}</p>
-        <p class="text-sm text-gray-500">{{ tool.description }}</p>
+        <p class="font-semibold text-zinc-100 mb-1">{{ tool.label }}</p>
+        <p class="text-sm text-zinc-400">{{ tool.description }}</p>
       </NuxtLink>
     </section>
 

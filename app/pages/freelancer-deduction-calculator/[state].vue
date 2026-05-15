@@ -58,6 +58,7 @@ const title = `${state.name} Freelancer Deduction Calculator 2026`
 const description = `See how business deductions reduce your ${state.name} freelancer taxes in 2026. Home office, mileage, retirement contributions — before-and-after tax comparison.`
 
 useSeoMeta({ title, description, ogUrl: pageUrl })
+useHead({ link: [{ rel: 'canonical', href: pageUrl }] })
 
 const { injectWebApplication, injectFaqPage, injectBreadcrumbList } = useJsonLd()
 injectWebApplication(title, description, pageUrl)

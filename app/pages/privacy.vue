@@ -47,4 +47,5 @@ useSeoMeta({
   title: 'Privacy Policy — 1099Freelancer',
   description: 'Privacy policy for 1099Freelancer. We do not collect your calculator inputs. Analytics via Google Analytics, ads via Google AdSense.',
 })
+useHead({ link: [{ rel: 'canonical', href: 'https://1099freelancer.com/privacy' }] })
 </script>

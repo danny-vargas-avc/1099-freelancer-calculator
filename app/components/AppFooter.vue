@@ -59,6 +59,7 @@
         <span>© {{ new Date().getFullYear() }} 1099Freelancer.com · 2026 Tax Year Data</span>
         <nav class="flex gap-4">
           <NuxtLink to="/about" class="hover:text-zinc-300 transition-colors">About</NuxtLink>
+          <NuxtLink to="/contact" class="hover:text-zinc-300 transition-colors">Contact</NuxtLink>
           <NuxtLink to="/privacy" class="hover:text-zinc-300 transition-colors">Privacy Policy</NuxtLink>
           <NuxtLink to="/terms" class="hover:text-zinc-300 transition-colors">Terms of Service</NuxtLink>
         </nav>

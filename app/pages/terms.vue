@@ -44,4 +44,5 @@ useSeoMeta({
   title: 'Terms of Service — 1099Freelancer',
   description: 'Terms of service for 1099Freelancer. Calculators are for informational purposes only and not tax advice.',
 })
+useHead({ link: [{ rel: 'canonical', href: 'https://1099freelancer.com/terms' }] })
 </script>

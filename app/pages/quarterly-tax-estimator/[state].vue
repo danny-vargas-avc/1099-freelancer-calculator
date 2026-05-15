@@ -58,6 +58,7 @@ const title = `${state.name} Quarterly Tax Estimator 2026`
 const description = `Estimate your 2026 quarterly tax payments as a ${state.name} freelancer. Calculate SE tax, federal income tax, and ${state.hasIncomeTax ? `${state.name} state tax` : 'net payments (no state income tax)'} due each quarter.`
 
 useSeoMeta({ title, description, ogUrl: pageUrl })
+useHead({ link: [{ rel: 'canonical', href: pageUrl }] })
 
 const { injectWebApplication, injectFaqPage, injectBreadcrumbList } = useJsonLd()
 injectWebApplication(title, description, pageUrl)

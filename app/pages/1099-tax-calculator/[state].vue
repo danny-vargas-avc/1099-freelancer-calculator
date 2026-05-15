@@ -63,6 +63,7 @@ const title = `${state.name} 1099 Tax Calculator 2026`
 const description = `Free ${state.name} 1099 tax calculator for 2026. Estimate self-employment tax, federal income tax, and ${state.hasIncomeTax ? `${state.name} state tax` : 'net income (no state income tax)'} as a freelancer.`
 
 useSeoMeta({ title, description, ogUrl: pageUrl })
+useHead({ link: [{ rel: 'canonical', href: pageUrl }] })
 
 const { injectWebApplication, injectFaqPage, injectBreadcrumbList } = useJsonLd()
 injectWebApplication(title, description, pageUrl)
