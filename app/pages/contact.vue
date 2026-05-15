@@ -7,7 +7,7 @@
         Email is the fastest way to reach me.
       </p>
       <p>
-        <a href="mailto:hello@1099freelancer.com" class="text-indigo-400 hover:text-indigo-300 transition-colors">hello@1099freelancer.com</a>
+        <a href="mailto:dannyvargasny@gmail.com" class="text-indigo-400 hover:text-indigo-300 transition-colors">dannyvargasny@gmail.com</a>
       </p>
       <p class="text-sm text-zinc-500">
         Heads up: I can't give personalized tax advice — I'm not a CPA. For your specific situation, please talk to a qualified tax professional.
@@ -20,7 +20,7 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'Contact — 1099Freelancer',
-  description: 'Contact 1099Freelancer about bugs, missing states, or out-of-date tax rates. Email hello@1099freelancer.com.',
+  description: 'Contact 1099Freelancer about bugs, missing states, or out-of-date tax rates. Email dannyvargasny@gmail.com.',
 })
 useHead({ link: [{ rel: 'canonical', href: 'https://1099freelancer.com/contact' }] })
 </script>
